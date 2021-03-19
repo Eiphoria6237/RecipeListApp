@@ -26,6 +26,7 @@ struct RecipeDetailView: View {
                 //recipe title
                 Text(recipe.name)
                     .bold()
+                    .foregroundColor(.black)
                     .padding(.top, 20)
                     .padding(.leading)
                     .font(.largeTitle)
@@ -61,6 +62,7 @@ struct RecipeDetailView: View {
                         
                     }
                 }.padding([.leading,.trailing],10)
+                .foregroundColor(.black)
                 
                 VStack(alignment:.leading) {
                     Text("Directions").font(.headline).padding([.bottom, .top],5)
@@ -69,6 +71,7 @@ struct RecipeDetailView: View {
                         Text(String(index+1)+"."+recipe.directions[index])
                     }
                 }.padding([.leading,.trailing],10)
+                .foregroundColor(.black)
             }
             
         }

@@ -29,13 +29,13 @@ struct RecipeFeaturedView: View {
                         
                         if model.recipes[index].featured == true {
                             
-                            Button {
+                            Button (action: {
                                 self.isDetailViewShowing = true
-                            } label: {
+                            }, label: {
                                 ZStack {
                                     Rectangle()
                                         .foregroundColor(.white)
-                                        
+                                    
                                     
                                     VStack(spacing:0) {
                                         Image(model.recipes[index].image)
@@ -43,6 +43,7 @@ struct RecipeFeaturedView: View {
                                             .aspectRatio(contentMode: .fill)
                                             .clipped()
                                         Text(model.recipes[index].name)
+                                            .foregroundColor(.black)
                                             .padding(.vertical,5)
                                     }
                                 }
@@ -55,11 +56,11 @@ struct RecipeFeaturedView: View {
                                 .frame(width: geo.size.width - 40, height: geo.size.height - 100, alignment: .center)
                                 .cornerRadius(15)
                                 .shadow(color:Color(hue: 0, saturation: 0, brightness: 0, opacity: 0.5), radius: 10, x:-5,y:5)
-                            }
+                            })
                             
-
                             
-                                
+                            
+                            
                         }
                         
                     }
